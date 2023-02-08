@@ -84,4 +84,109 @@
 > console.log(numbers); // [1, 2, 3, 4]
 >
 > ```
+
+> ### **📍 01.02 Exemplo de modificar elementos em uma matriz em JavaScript:**
+>
+> ---
+> 1. Usando o operador de atribuição: atribua diretamente um valor a um índice na matriz.
+>#### ***✍️Exemplo de código JS***
+> ``` JS
+> let numbers = [1, 2, 3];
+> numbers[1] = 1.5;
+> console.log(numbers); // [1, 1.5, 3]
+>
+> ```
+> ---
+>  2. Usando o splice()método: Modifica elementos em uma matriz em uma posição especificada e também pode adicionar ou remover elementos. O primeiro argumento é o índice inicial, o segundo argumento é o número de elementos a serem removidos (se houver) e o restante dos argumentos são os elementos a serem adicionados. Ele retorna uma matriz dos elementos removidos.
+>
+>#### ***✍️Exemplo de código JS***
+> ``` JS
+> let numbers = [1, 2, 3];
+> let removed = numbers.splice(1, 1, 1.5);
+> console.log(numbers); // [1, 1.5, 3]
+> console.log(removed); // [2]
+>
+> ```
+>
+> ---
+> 3. Usando o map()método: Cria um novo array aplicando uma função a cada elemento do array original.
+>
+>#### ***✍️Exemplo de código JS***
+> ``` JS
+> let numbers = [1, 2, 3];
+> let doubledNumbers = numbers.map(function(number) {
+>   return number * 2;
+> });
+> console.log(doubledNumbers); // [2, 4, 6]
+> ```
+>
+> 4. Usando um loop: modifique os elementos em uma matriz usando um loop como forou forEach.
+>
+> ---
+>#### ***✍️Exemplo de código JS***
+> ``` JS
+> let numbers = [1, 2, 3];
+> for (let i = 0; i < numbers.length; i++) {
+>   numbers[i] = numbers[i] * 2;
+> }
+> console.log(numbers); // [2, 4, 6]
+>
+> ```
+
+
+> ### **📍 01.03 Exemplo de como remover elementos de um array**
+>
+> 1. Usando o pop()método: Remove o último elemento de um array e retorna o elemento removido.
+>
+>#### ***✍️Exemplo de código JS***
+>``` JS
+> let numbers = [1, 2, 3];
+> let last = numbers.pop();
+> console.log(numbers); // [1, 2]
+> console.log(last); // 3
+>
+> ```
+> ---
+> 2. Usando o shift()método: Remove o primeiro elemento de um array e retorna o elemento removido.
+>
+>#### ***✍️Exemplo de código JS***
+> ``` JS
+> let numbers = [1, 2, 3];
+> let first = numbers.shift();
+> console.log(numbers); // [2, 3]
+> console.log(first); // 1
+>
+> ```
+> ---
+>
+> 3. Usando o splice()método: Remove elementos de uma matriz em uma posição especificada e também pode adicionar ou modificar elementos. O primeiro argumento é o índice inicial, o segundo argumento é o número de elementos a serem removidos e o restante dos argumentos são os elementos a serem adicionados. Ele retorna uma matriz dos elementos removidos.
+>
+>
+>#### ***✍️Exemplo de código JS***
+> ``` JS
+> let numbers = [1, 2, 3];
+> let removed = numbers.splice(1, 1);
+> console.log(numbers); // [1, 3]
+> console.log(removed); // [2]
+>
+>```
+>
+> ---
+> 4.   Usando o filter()método: Cria uma nova matriz que inclui apenas elementos que passam em um determinado teste.
+>
+>
+>#### ***✍️Exemplo de código JS***
+> ``` JS
+> let numbers = [1, 2, 3, 4, 5];
+> let evenNumbers = numbers.filter(function(number) {
+>   return number % 2 === 0;
+> });
+> console.log(evenNumbers); // [2, 4]
+>
+> ```
+>     Nesse último trecho de código é um exemplo de como remover elementos de um array usando o filter()método. O filter()método cria uma nova matriz que inclui apenas elementos que passam em um determinado teste, especificado pela função fornecida.
+>     Neste exemplo, a função verifica se cada elemento da numbersmatriz é divisível por 2 usando o módulo operador %. Se o resultado for 0, significa que o número é par e será incluído no novo array evenNumbers. O filter()método retorna uma nova matriz que contém apenas números pares da numbersmatriz original.
+>     Portanto, esse trecho de código filtra todos os números ímpares da numbersmatriz e armazena apenas os números pares na evenNumbersmatriz.
+>
+> ---
 >
